@@ -20,6 +20,7 @@ Conexion\ConexionMysql.class
 VISTA\frm_Login$1.class
 VISTA\frm_RegistrarUsuario.class
 CONTROLADOR\Controlador_Frm_Login$2.class
+VISTA\frm_RegistrarUsuario$6.class
 VISTA\frm_ProductosAgrupados$2.class
 VISTA\frm_RegistrarProducto$9.class
 MODELO\Registro.class
@@ -39,6 +40,7 @@ VISTA\MenuPrincipal.class
 VISTA\frm_Login$2.class
 VISTA\frm_RegistrarProducto$1.class
 VISTA\frm_RegistrarUsuario$4.class
+VISTA\frm_RegistrarProducto$13.class
 Main\Principal.class
 VISTA\frm_ProductosAgrupados$4$1.class
 VISTA\frm_ProductosAgrupados$1.class
