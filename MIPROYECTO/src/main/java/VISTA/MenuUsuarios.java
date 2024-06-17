@@ -1,24 +1,21 @@
 package VISTA;
 
-import MODELO.Usuario;
-import Main.Principal;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 
-public class MenuPrincipal extends javax.swing.JFrame {
-    
+/**
+ *
+ * @author Danii
+ */
+public class MenuUsuarios extends javax.swing.JFrame {
+
     private MenuPerfil menuPerfil; // Referencia a la ventana MenuPerfil
-    private Usuario usuarioActual;
 
-    public MenuPrincipal() {
+    /**
+     * Creates new form MenuUsuarios
+     */
+    public MenuUsuarios() {
         initComponents();
     }
-
-    public MenuPrincipal(Usuario usuario) {
-        initComponents();
-        this.usuarioActual = usuario;
-    }
-    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -29,19 +26,15 @@ public class MenuPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel3 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jTextField2 = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        btnRegistrarProducto = new javax.swing.JButton();
+        btnInventario = new javax.swing.JButton();
         btnSalir = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         btn_MenuPerfil = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-
-        jLabel3.setText("jLabel3");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -53,25 +46,22 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jTextField2.setFont(new java.awt.Font("Monospac821 BT", 1, 14)); // NOI18N
         jTextField2.setForeground(new java.awt.Color(255, 255, 255));
         jTextField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField2.setText("MENU");
+        jTextField2.setText("MENU USUARIO");
         jTextField2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jTextField2.setFocusable(false);
         jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 640, -1));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Danii\\Documents\\NetBeansProjects\\MIPROYECTO\\src\\main\\java\\imagenes\\supervision.png")); // NOI18N
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 50, -1, -1));
 
-        btnRegistrarProducto.setFont(new java.awt.Font("Monospac821 BT", 1, 14)); // NOI18N
-        btnRegistrarProducto.setText("Gestor de Inventario");
-        btnRegistrarProducto.addActionListener(new java.awt.event.ActionListener() {
+        btnInventario.setFont(new java.awt.Font("Monospac821 BT", 1, 14)); // NOI18N
+        btnInventario.setText("Inventario");
+        btnInventario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRegistrarProductoActionPerformed(evt);
+                btnInventarioActionPerformed(evt);
             }
         });
-        jPanel2.add(btnRegistrarProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
 
         btnSalir.setFont(new java.awt.Font("Monospac821 BT", 1, 12)); // NOI18N
         btnSalir.setText("Cerrar sesion");
@@ -80,10 +70,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 btnSalirActionPerformed(evt);
             }
         });
-        jPanel2.add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 390, 160, 30));
 
         jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Danii\\Documents\\NetBeansProjects\\MIPROYECTO\\src\\main\\java\\imagenes\\Png wikaeli.png")); // NOI18N
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 130, 240, -1));
 
         btn_MenuPerfil.setFont(new java.awt.Font("Monospac821 BT", 1, 14)); // NOI18N
         btn_MenuPerfil.setText("Perfil");
@@ -92,10 +80,41 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 btn_MenuPerfilActionPerformed(evt);
             }
         });
-        jPanel2.add(btn_MenuPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 130, 200, -1));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Danii\\Documents\\NetBeansProjects\\MIPROYECTO\\src\\main\\java\\imagenes\\usuario (3).png")); // NOI18N
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 50, -1, -1));
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(90, 90, 90)
+                .addComponent(jLabel2))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(btnInventario, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(190, 190, 190)
+                        .addComponent(btn_MenuPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(170, 170, 170)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(240, 240, 240)
+                .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel2)
+                .addGap(16, 16, 16)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnInventario)
+                    .addComponent(btn_MenuPerfil)
+                    .addComponent(jLabel4))
+                .addGap(10, 10, 10)
+                .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 640, 450));
 
@@ -116,20 +135,40 @@ public class MenuPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnRegistrarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarProductoActionPerformed
-        // Crear y mostrar frm_RegistrarProducto con dependencias
-        Principal.mostrarFrmRegistrarProducto();
-    }//GEN-LAST:event_btnRegistrarProductoActionPerformed
+    private void btnInventarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInventarioActionPerformed
+        frm_ProductosAgrupados productosAgrupados = new frm_ProductosAgrupados(this, true);
+
+        // Llamar al método para cargar y mostrar los datos de la tabla productos
+        productosAgrupados.cargarDatosProductos();
+
+        // Hacer visible la ventana
+        productosAgrupados.setVisible(true);
+    }//GEN-LAST:event_btnInventarioActionPerformed
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
-        System.exit(0); // Ejemplo básico de salir de la aplicación
+        System.exit(0); // salir de la aplicación
     }//GEN-LAST:event_btnSalirActionPerformed
 
     private void btn_MenuPerfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_MenuPerfilActionPerformed
-        // Crear una instancia de MenuPerfil si no existe
+ // Crear una instancia de MenuPerfil si no existe
         if (menuPerfil == null) {
-            menuPerfil = new MenuPerfil(usuarioActual);
+            menuPerfil = new MenuPerfil();
         }
+
+        // Simular datos de usuario (deberías obtener estos datos de tu base de datos)
+        int idUsuario = 1;
+        String nombre = "Daniel";
+        String apellido = "Arteaga";
+        String correo = "Daniiel12953@gmail.com";
+        String contrasena = "******";
+        String fechaRegistro = "2024-06-09 21:14:47";
+        String ultimoAcceso = "";  // Aquí deberías obtener la fecha real de último acceso
+        String rol = "usuario_normal";
+        String estadoCuenta = "activo";
+
+        // Mostrar la información en MenuPerfil
+        menuPerfil.mostrarInformacion(idUsuario, nombre, apellido, correo, contrasena,
+                                      fechaRegistro, ultimoAcceso, rol, estadoCuenta);
 
         // Hacer visible MenuPerfil
         menuPerfil.setVisible(true);
@@ -152,33 +191,31 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MenuPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuUsuarios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MenuPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuUsuarios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MenuPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuUsuarios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MenuPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuUsuarios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MenuPrincipal().setVisible(true);
+                new MenuUsuarios().setVisible(true);
             }
         });
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btnRegistrarProducto;
+    public javax.swing.JButton btnInventario;
     public javax.swing.JButton btnSalir;
     private javax.swing.JButton btn_MenuPerfil;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private static javax.swing.JTextField jTextField2;
