@@ -5,12 +5,18 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConexionMysql {
+    // Datos de conexión a la base de datos
     private static final String URL = "jdbc:mysql://localhost:3306/miproyecto";
     private static final String USER = "root";
     private static final String PASSWORD = "";
+    
+    // Variable para mantener la conexión
     private static Connection cn;
 
-    // Método para establecer la conexión
+    /**
+     * Método para establecer la conexión a la base de datos.
+     * @return La conexión establecida.
+     */
     public static Connection conectar() {
         try {
             if (cn == null || cn.isClosed()) {
@@ -23,7 +29,10 @@ public class ConexionMysql {
         return cn;
     }
 
-    // Método para obtener la conexión
+    /**
+     * Método para obtener la conexión a la base de datos.
+     * @return La conexión actual o una nueva conexión si no está establecida.
+     */
     public static Connection getConexion() {
         if (cn == null) {
             cn = conectar(); // Establece la conexión si no está inicializada
@@ -39,7 +48,9 @@ public class ConexionMysql {
         return cn;
     }
 
-    // Método para cerrar la conexión
+    /**
+     * Método para cerrar la conexión a la base de datos.
+     */
     public static void cerrarConexion() {
         if (cn != null) {
             try {

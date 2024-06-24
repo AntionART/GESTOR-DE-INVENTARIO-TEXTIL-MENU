@@ -4,21 +4,29 @@ import MODELO.Usuario;
 import Main.Principal;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class MenuPrincipal extends javax.swing.JFrame {
-    
-    private MenuPerfil menuPerfil; // Referencia a la ventana MenuPerfil
+
     private Usuario usuarioActual;
+
+    private MenuPerfil menuPerfil; // Referencia a la ventana MenuPerfil
 
     public MenuPrincipal() {
         initComponents();
+        
     }
 
     public MenuPrincipal(Usuario usuario) {
         initComponents();
+        
+        // Centrar la ventana en la pantalla
+        setLocationRelativeTo(null);
         this.usuarioActual = usuario;
     }
-    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -39,6 +47,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         btn_MenuPerfil = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
+        btn_administrarusuarios = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         jLabel3.setText("jLabel3");
@@ -59,10 +69,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 640, -1));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Danii\\Documents\\NetBeansProjects\\MIPROYECTO\\src\\main\\java\\imagenes\\supervision.png")); // NOI18N
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 50, -1, -1));
 
         btnRegistrarProducto.setFont(new java.awt.Font("Monospac821 BT", 1, 14)); // NOI18N
         btnRegistrarProducto.setText("Gestor de Inventario");
@@ -71,7 +79,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 btnRegistrarProductoActionPerformed(evt);
             }
         });
-        jPanel2.add(btnRegistrarProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
 
         btnSalir.setFont(new java.awt.Font("Monospac821 BT", 1, 12)); // NOI18N
         btnSalir.setText("Cerrar sesion");
@@ -80,10 +87,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 btnSalirActionPerformed(evt);
             }
         });
-        jPanel2.add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 390, 160, 30));
 
         jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Danii\\Documents\\NetBeansProjects\\MIPROYECTO\\src\\main\\java\\imagenes\\Png wikaeli.png")); // NOI18N
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 130, 240, -1));
 
         btn_MenuPerfil.setFont(new java.awt.Font("Monospac821 BT", 1, 14)); // NOI18N
         btn_MenuPerfil.setText("Perfil");
@@ -92,10 +97,69 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 btn_MenuPerfilActionPerformed(evt);
             }
         });
-        jPanel2.add(btn_MenuPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 130, 200, -1));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Danii\\Documents\\NetBeansProjects\\MIPROYECTO\\src\\main\\java\\imagenes\\usuario (3).png")); // NOI18N
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 50, -1, -1));
+        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Danii\\Documents\\NetBeansProjects\\MIPROYECTO\\src\\main\\java\\imagenes\\Usuarioicono.png")); // NOI18N
+
+        btn_administrarusuarios.setFont(new java.awt.Font("Monospac821 BT", 1, 14)); // NOI18N
+        btn_administrarusuarios.setText("Administrar Usuarios");
+        btn_administrarusuarios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_administrarusuariosActionPerformed(evt);
+            }
+        });
+
+        jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\Danii\\Documents\\NetBeansProjects\\MIPROYECTO\\src\\main\\java\\imagenes\\Usuarioicono.png")); // NOI18N
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(90, 90, 90)
+                .addComponent(jLabel2)
+                .addGap(320, 320, 320)
+                .addComponent(jLabel5))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(460, 460, 460)
+                        .addComponent(jLabel6))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(390, 390, 390)
+                        .addComponent(btn_administrarusuarios))
+                    .addComponent(btnRegistrarProducto)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(390, 390, 390)
+                        .addComponent(btn_MenuPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(170, 170, 170)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(240, 240, 240)
+                .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel5))
+                .addGap(16, 16, 16)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(120, 120, 120)
+                        .addComponent(jLabel6))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(190, 190, 190)
+                        .addComponent(btn_administrarusuarios))
+                    .addComponent(btnRegistrarProducto)
+                    .addComponent(btn_MenuPerfil)
+                    .addComponent(jLabel4))
+                .addGap(10, 10, 10)
+                .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 640, 450));
 
@@ -134,6 +198,14 @@ public class MenuPrincipal extends javax.swing.JFrame {
         // Hacer visible MenuPerfil
         menuPerfil.setVisible(true);
     }//GEN-LAST:event_btn_MenuPerfilActionPerformed
+
+    private void btn_administrarusuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_administrarusuariosActionPerformed
+    // Crear una instancia de MenuAdministrador
+    MenuAdministrador menuAdmin = new MenuAdministrador();
+    
+    // Hacer visible la ventana MenuAdministrador
+    menuAdmin.setVisible(true);
+    }//GEN-LAST:event_btn_administrarusuariosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -174,11 +246,13 @@ public class MenuPrincipal extends javax.swing.JFrame {
     public javax.swing.JButton btnRegistrarProducto;
     public javax.swing.JButton btnSalir;
     private javax.swing.JButton btn_MenuPerfil;
+    private javax.swing.JButton btn_administrarusuarios;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private static javax.swing.JTextField jTextField2;

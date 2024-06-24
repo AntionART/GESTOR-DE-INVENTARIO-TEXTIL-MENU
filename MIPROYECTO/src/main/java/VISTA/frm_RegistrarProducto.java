@@ -499,9 +499,6 @@ public class frm_RegistrarProducto extends javax.swing.JDialog {
     }//GEN-LAST:event_btn_cancelarActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // Código para redirigir al formulario de login
-        MenuPrincipal MenuPrincipal = new MenuPrincipal(); // Crear instancia del formulario de MenuPrincipal
-        MenuPrincipal.setVisible(true); // Hacer visible el formulario de MenuPrincipal
         this.dispose(); // Cerrar el formulario actual (opcional, dependiendo de tu flujo de la aplicación
     }//GEN-LAST:event_jButton1ActionPerformed
 
